@@ -1,0 +1,31 @@
+{
+	"name": "ecommerce",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js",
+		"dev": "SET NODE_ENV=DEVELOPMENT& nodemon server.js",
+		"prod": "SET NODE_ENV=PRODUCTION & nodemon server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "activehubb"
+	},
+	"keywords": [
+		"ecommerce",
+		"mern",
+		"stack",
+		"site"
+	],
+	"author": "activehubb",
+	"license": "ISC",
+	"dependencies": {
+		"dotenv": "^16.0.0",
+		"express": "^4.17.3",
+		"mongoose": "^6.2.9"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	}
+}
