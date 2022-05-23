@@ -1,0 +1,77 @@
+[
+	{
+		"name": "Google Pixel 4 64GB Unlocked Smartphone 5.7' FHD Display 6GB RAM 4G Clear White",
+		"description": "The Google phone. Motion Sense, an evolved camera, and the new Google Assistant make Pixel 4 our most helpful phone yet. Studio-like photos. Without the studio. Shoot without the flash. Capture rich detail and color, even in the dark, with the next generation of Night Sight. Capture the cosmos. The camera that can take photos of the Milky Way.",
+		"images": [
+			{
+				"url": "https://media.secure-mobiles.com/product-images/google-pixel-6-128gb-sorta-seafoam.responsive-fs.centre.webp",
+				"public_id": "842776114952"
+			}
+		],
+		"price": "549.99",
+		"ratings": "3.5",
+		"category": "Electronics",
+		"seller": "Google",
+		"stock": 13
+	},
+	{
+		"name": "Google Pixel 4 64GB Unlocked Smartphone 5.7' FHD Display 6GB RAM 4G Clear White",
+		"description": "The Google phone. Motion Sense, an evolved camera, and the new Google Assistant make Pixel 4 our most helpful phone yet. Studio-like photos. Without the studio. Shoot without the flash. Capture rich detail and color, even in the dark, with the next generation of Night Sight. Capture the cosmos. The camera that can take photos of the Milky Way.",
+		"images": [
+			{
+				"url": "https://media.secure-mobiles.com/product-images/google-pixel-6-128gb-sorta-seafoam.responsive-fs.centre.webp",
+				"public_id": "842776114952"
+			}
+		],
+		"price": "549.99",
+		"ratings": "3.5",
+		"category": "Electronics",
+		"seller": "Tesla",
+		"stock": 5
+	},
+	{
+		"name": "15.6 inch Laptop Notebook, 1920 × 1080 IPS FHD Display, Intel 64-bit Core M-5Y51 Processor, Windows 10, 8GB RAM, 128GB SSD ROM, High Capacity Battery",
+		"description": "The Windows 10 Pro operating system is preinstalled on the laptop, which can be started quickly and is easy to use. (Note: Due to the latest Windows operating system upgrade, the maximum update time is 48 hours. To avoid a long wait for updates, click Please skip wireless connection when starting the wizard for the first time.)",
+		"images": [
+			{
+				"url": "https://th.bing.com/th?id=OPE.aG%2fZZup3QHw%2b2g300C300&w=200&h=150&pid=21.1",
+				"public_id": "842776114952"
+			}
+		],
+		"price": "749.99",
+		"ratings": "3.5",
+		"category": "Laptop",
+		"seller": "Amazon",
+		"stock": 2
+	},
+	{
+		"name": "DJI Mini 2 - Ultralight And Foldable Drone Quadcopter, 3-Axis Gimbal With 4K Camera, 12MP Photo, 31 Minutes Flight Time, Ocusync 2.0 HD Video",
+		"description": "Pack light, Fly free: At less than 249 g, it weighs about as much as an apple and fits in the palm of your hand. Compact and convenient, Mini 2 is your ideal travel companion, transforming how you capture your favorite memories Three-axis gimbal with 4K camera: A 12 MP camera in the sky delivers content assures to impress. Along with 4K/30 fps video and a three-axis motorized gimbal, Mini 2 ensures stunning image quality that is consistently smooth no matter how adventurous your piloting gets Ocusync 2.0 video transmission: Mini 2 supports up to six km of HD video",
+		"images": [
+			{
+				"url": "https://th.bing.com/th?id=OSC.TOOLF92D02AA76F3FEF1CB8AB06B21748C7E7B240B680704D7D7163C4D0E9EA8FC6A&w=120&h=120&c=10&pid=21.1",
+				"public_id": "842776114952"
+			}
+		],
+		"price": "749.99",
+		"ratings": "5.0",
+		"category": "Electronics",
+		"seller": "Amazon",
+		"stock": 2
+	},
+	{
+		"name": "New Look Women's Black Floral Ruched Sweetheart Neck Top - UK 16",
+		"description": "New Look Black Floral Ruched Sweetheart Neck Top. Make this black ruched top your new floral favourite. Floral print. Sweetheart neckline. Short sleeves. Ruched tie front. Soft jersey fabric. Made using organic cotton. Slim fit. Emily is 5 7 /170cm and wears UK 10/EU 38/US 6. This piece is part of New Look Kind: styles that are responsibly sourced and friendlier to the planet.",
+		"images": [
+			{
+				"url": "https://th.bing.com/th?id=OPE.fpXLMAteKxu7HA300C300&w=202&h=202&pid=21.1",
+				"public_id": "842776114952"
+			}
+		],
+		"price": "9.99",
+		"ratings": "4.0",
+		"category": "Clothes/Shoes",
+		"seller": "Sporty",
+		"stock": 14
+	}
+]

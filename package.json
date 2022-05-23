@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "node server.js",
 		"dev": "SET NODE_ENV=DEVELOPMENT& nodemon server.js",
-		"prod": "SET NODE_ENV=PRODUCTION & nodemon server.js"
+		"prod": "SET NODE_ENV=PRODUCTION& nodemon server.js",
+		"seeder": "node backend/utils/seeder.js"
 	},
 	"repository": {
 		"type": "git",
@@ -21,9 +22,15 @@
 	"author": "activehubb",
 	"license": "ISC",
 	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"body-parser": "^1.20.0",
+		"cookie-parser": "^1.4.6",
 		"dotenv": "^16.0.0",
 		"express": "^4.17.3",
-		"mongoose": "^6.2.9"
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^6.2.9",
+		"nodemailer": "^6.7.5",
+		"validator": "^13.7.0"
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.15"

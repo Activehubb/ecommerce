@@ -6,7 +6,26 @@ dotenv.config({ path: 'backend/config/config.env' });
 const PORT = process.env.PORT;
 const MODE = process.env.NODE_ENV;
 
-// COnnect to DB
-connectDB()
+// Handle uncaught exception
 
-app.listen(PORT, () => console.log(` running on port ${PORT} in ${MODE} mode`));
+process.on('uncaughtException', (error) => {
+	console.log(`ERR: ${error.message}`);
+	console.log(`Shutting down the server due to uncaughtException`);
+	process.exit(1);
+});
+
+// Connect to DB
+connectDB();
+
+const server = app.listen(PORT, () =>
+	console.log(`Server running on port ${PORT} in ${MODE} mode`)
+);
+
+// Handle unhandle promise rejection
+process.on('unhandledRejection', (error) => {
+	console.log(`ERR: ${error.message}`);
+	console.log(`Shutting down the server due to unhandled promise rejection`);
+	server.close(() => {
+		process.exit(1);
+	});
+});
