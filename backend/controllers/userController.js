@@ -64,6 +64,43 @@ exports.getUser = catchAsyncErr(async (req, res, next) => {
 	res.status(200).json({ success: true, user });
 });
 
+// Update Password => /api/v1/password
+
+exports.updateUserPassword = catchAsyncErr(async (req, res, next) => {
+	const user = await User.findById(req.user.id).select('+password');
+
+	// Check Previous Password
+
+	const isPasswordMatched = await user.comparePassword(req.body.oldPassword);
+
+	if (!isPasswordMatched) {
+		return next(new ErrorHandler(`Entered password is incorrect`, 400));
+	}
+
+	user.password = req.body.password;
+
+	await user.save();
+
+	sendToken(user, 200, res);
+});
+
+// Update User  => /api/v1/user/update
+
+exports.updateProfile = catchAsyncErr(async (req, res, next) => {
+	const newUserData = {
+		name: req.body.name,
+		email: req.body.email,
+	};
+
+	const user = await User.findByIdAndUpdate(
+		req.user.id,
+		{ $set: newUserData },
+		{ new: true }
+	);
+
+	res.status(200).json({ success: true, user });
+});
+
 // forgot password => /api/v1/password/reset
 
 exports.forgotPassword = catchAsyncErr(async (req, res, next) => {
@@ -154,3 +191,51 @@ exports.logout = async (req, res, next) => {
 		res.status(500).json({ msg: `logout ERR: ${error.message}` });
 	}
 };
+
+// Admin Routes
+
+// Get all users => /api/v1/admin/users
+
+exports.getAllUsers = catchAsyncErr(async (req, res, next) => {
+	const users = await User.find();
+
+	res.status(200).json({ success: true, users });
+});
+
+// Get specific user by ID => /api/v1/admin/user/:profileID
+exports.getUserDetailsById = catchAsyncErr(async (req, res, next) => {
+	const user = await User.findById(req.params.id);
+
+	if (!user) {
+		return next(new ErrorHandler(`User not found`, 400));
+	}
+
+	res.status(200).json({ success: true, user });
+});
+
+// Update user Role profile => /api/v1/admin/user/;id
+
+exports.updateUser = catchAsyncErr(async (req, res, next) => {
+	const newUserData = {
+		name: req.body.name,
+		email: req.body.email,
+		role: req.body.role,
+	};
+	const updateUser = await User.findByIdAndUpdate(
+		req.params.id,
+		{ $set: newUserData },
+		{ new: true }
+	);
+
+	res.status(200).json({ success: true, updateUser });
+});
+
+// Delete User => /api/v1/admin/user/:id
+
+exports.deleteUserProfile = catchAsyncErr(async (req, res, next) => {
+	await User.findByIdAndRemove(req.params.id);
+
+	res
+		.status(200)
+		.json({ success: true, msg: 'User profile deleted successfully' });
+});
